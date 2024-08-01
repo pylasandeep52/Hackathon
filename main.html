@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME PAGE</title>
+    <!--nav-->
+    <link rel="stylesheet" href="styledit1.css">
+    <!--sliders-->
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!--event cards-->
+    <link rel="stylesheet" href="cardedit.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!--commitee-->
+    <link rel="stylesheet" href="committestyle.css">
+    <!--aboutus -->
+    <link rel="stylesheet" href="aboutus.css">
+    <!--footer-->
+    <link rel="stylesheet" href="footerr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--for all -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<style>
+        /* Additional CSS styles */
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        .social-icons a:hover {
+            background-color: #555;
+        }
+        .social-icons img {
+            width: 100%;
+            height: auto;
+        }
+    </style>-->
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <i class='bx bx-menu'></i>
+            <div class="logo"><a href="#">Hackathon</a></div>
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo-name">Hackathon</span>
+                    <i class='bx bx-x'></i>
+                </div>
+                <ul class="links">
+                    <li><a href="#">HOME</a></li>
+                    <li>
+                        <a href="#">DIRECTIVES</a>
+                        <i class='bx bxs-chevron-down htmlcss-arrow arrow'></i>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="#">Idea</a></li>
+                            <li><a href="#">Application</a></li>
+                            <li><a href="#">Screening</a></li>
+                            <li class="more">
+                                <span><a href="#">More</a>
+                                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                            </span>
+                                <ul class="more-sub-menu sub-menu">
+                                    <li><a href="#">procedure</a></li>
+                                    <li><a href="#">Content</a></li>
+                                    <li><a href="#">Problems</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">RESULTS</a>
+                        <i class='bx bxs-chevron-down js-arrow arrow'></i>
+                        <ul class="js-sub-menu sub-menu">
+                            <li><a href="#">RIH 2024</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about-us">ABOUT US</a></li>
+                    <li><a href="#contact-us">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="search-box">
+                <i class='bx bx-search'></i>
+                <div class="input-box">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            <div class="login-button">
+                <button id="loginBtn">Login</button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Login and Registration Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="loginForm">
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Login</button>
+                    <p class="register-link">Don't have an account? <a href="#" id="registerLink">Register</a></p>
+                </form>
+            </div>
+            <div id="registerForm" style="display: none;">
+                <h2>Register</h2>
+                <form>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="password">Create Password</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                    <div class="captcha">
+                        <!-- Implement your CAPTCHA integration here -->
+                        <label for="captcha">CAPTCHA</label>
+                        <input type="text" id="captcha" name="captcha" required>
+                    </div>
+
+                    <button type="submit">Register</button>
+                    <p class="login-link">Already have an account? <a href="#" id="loginLink">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptedit1.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!--  slides section starts  -->
+
+    <div class="content">
+        <div class="images">
+           <img src="https://t3.ftcdn.net/jpg/03/01/13/20/360_F_301132090_LKoSp3l3cXlCo78zaAe2M9LI2z5yznvB.jpg">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxoz_G8T7FTGvMLa6DQjAEguMzuBLgA0A5yA&s">
+           <img src="https://www.shutterstock.com/image-vector/banner-hackathon-design-sprintlike-event-260nw-1480338785.jpg">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDXtSydiHbLDmpAz5PuU30BVV9PeCxNJCNQ&s">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNGCZ22YXSjj1W9JFGlTFjk1z3Pm3wL8rILg&s">
+        </div>
+        <div class="btm-slides">
+           <span onclick="btm_slide(1)"></span>
+           <span onclick="btm_slide(2)"></span>
+           <span onclick="btm_slide(3)"></span>
+           <span onclick="btm_slide(4)"></span>
+           <span onclick="btm_slide(5)"></span>
+        </div>
+        <div class="sliders left" onclick="side_slide(-1)">
+           <span class="fas fa-angle-left"></span>
+        </div>
+        <div class="sliders right" onclick="side_slide(1)">
+           <span class="fas fa-angle-right"></span>
+        </div>
+     </div>
+
+     <script src="slider1.js"></script>
+
+<!--slides section ends-->
+    
+<!-- events section starts-->
+      
+     <div class="event-section">
+        <div class="event-tabs">
+            <button id="live-tab" onclick="showSection('live')">Live Events</button>
+            <button onclick="showSection('upcoming')">Upcoming Events</button>
+            <button onclick="showSection('past')">Past Events</button>
+        </div>
+
+        <div id="live-section" class="event-cards swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.oZDf4YBvgg2I3b-GuB1bawHaE8&pid=Api&P=0&h=180" alt="Live Event 1" onclick="navigateToEvent('live-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Live Event 1</h3>
+                            <div class="participants">Participants: 50</div>
+                            <div class="timeline" data-end-time="2024-07-20T12:00:00Z">Event ends in: <span class="countdown"></span></div>
+                            <button onclick="navigateToEvent('live-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more live event cards here -->
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.oZDf4YBvgg2I3b-GuB1bawHaE8&pid=Api&P=0&h=180" alt="Live Event 1" onclick="navigateToEvent('live-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Live Event 1</h3>
+                            <div class="participants">Participants: 50</div>
+                            <div class="timeline" data-end-time="2024-07-20T12:00:00Z">Event ends in: <span class="countdown"></span></div>
+                            <button onclick="navigateToEvent('live-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.oZDf4YBvgg2I3b-GuB1bawHaE8&pid=Api&P=0&h=180" alt="Live Event 1" onclick="navigateToEvent('live-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Live Event 1</h3>
+                            <div class="participants">Participants: 50</div>
+                            <div class="timeline" data-end-time="2024-07-20T12:00:00Z">Event ends in: <span class="countdown"></span></div>
+                            <button onclick="navigateToEvent('live-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.oZDf4YBvgg2I3b-GuB1bawHaE8&pid=Api&P=0&h=180" alt="Live Event 1" onclick="navigateToEvent('live-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Live Event 1</h3>
+                            <div class="participants">Participants: 50</div>
+                            <div class="timeline" data-end-time="2024-07-20T12:00:00Z">Event ends in: <span class="countdown"></span></div>
+                            <button onclick="navigateToEvent('live-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.oZDf4YBvgg2I3b-GuB1bawHaE8&pid=Api&P=0&h=180" alt="Live Event 1" onclick="navigateToEvent('live-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Live Event 1</h3>
+                            <div class="participants">Participants: 50</div>
+                            <div class="timeline" data-end-time="2024-07-20T12:00:00Z">Event ends in: <span class="countdown"></span></div>
+                            <button onclick="navigateToEvent('live-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.oZDf4YBvgg2I3b-GuB1bawHaE8&pid=Api&P=0&h=180" alt="Live Event 1" onclick="navigateToEvent('live-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Live Event 1</h3>
+                            <div class="participants">Participants: 50</div>
+                            <div class="timeline" data-end-time="2024-07-20T12:00:00Z">Event ends in: <span class="countdown"></span></div>
+                            <button onclick="navigateToEvent('live-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.oZDf4YBvgg2I3b-GuB1bawHaE8&pid=Api&P=0&h=180" alt="Live Event 1" onclick="navigateToEvent('live-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Live Event 1</h3>
+                            <div class="participants">Participants: 50</div>
+                            <div class="timeline" data-end-time="2024-07-20T12:00:00Z">Event ends in: <span class="countdown"></span></div>
+                            <button onclick="navigateToEvent('live-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div id="upcoming-section" class="event-cards swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://www.hackerleague.org/wp-content/uploads/2019/08/hackathaon-thesource.jpg" alt="Upcoming Event 1" onclick="navigateToEvent('upcoming-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Upcoming Event 1</h3>
+                            <p>Starts on: July 25, 2024, 10:00 AM</p>
+                            <button onclick="navigateToEvent('upcoming-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more upcoming event cards here -->
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://www.hackerleague.org/wp-content/uploads/2019/08/hackathaon-thesource.jpg" alt="Upcoming Event 1" onclick="navigateToEvent('upcoming-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Upcoming Event 1</h3>
+                            <p>Starts on: July 25, 2024, 10:00 AM</p>
+                            <button onclick="navigateToEvent('upcoming-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://www.hackerleague.org/wp-content/uploads/2019/08/hackathaon-thesource.jpg" alt="Upcoming Event 1" onclick="navigateToEvent('upcoming-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Upcoming Event 1</h3>
+                            <p>Starts on: July 25, 2024, 10:00 AM</p>
+                            <button onclick="navigateToEvent('upcoming-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://www.hackerleague.org/wp-content/uploads/2019/08/hackathaon-thesource.jpg" alt="Upcoming Event 1" onclick="navigateToEvent('upcoming-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Upcoming Event 1</h3>
+                            <p>Starts on: July 25, 2024, 10:00 AM</p>
+                            <button onclick="navigateToEvent('upcoming-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://www.hackerleague.org/wp-content/uploads/2019/08/hackathaon-thesource.jpg" alt="Upcoming Event 1" onclick="navigateToEvent('upcoming-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Upcoming Event 1</h3>
+                            <p>Starts on: July 25, 2024, 10:00 AM</p>
+                            <button onclick="navigateToEvent('upcoming-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://www.hackerleague.org/wp-content/uploads/2019/08/hackathaon-thesource.jpg" alt="Upcoming Event 1" onclick="navigateToEvent('upcoming-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Upcoming Event 1</h3>
+                            <p>Starts on: July 25, 2024, 10:00 AM</p>
+                            <button onclick="navigateToEvent('upcoming-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://www.hackerleague.org/wp-content/uploads/2019/08/hackathaon-thesource.jpg" alt="Upcoming Event 1" onclick="navigateToEvent('upcoming-event1.html')">
+                        </div>
+                        <div class="card-info">
+                            <h3>Upcoming Event 1</h3>
+                            <p>Starts on: July 25, 2024, 10:00 AM</p>
+                            <button onclick="navigateToEvent('upcoming-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div id="past-section" class="event-cards swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://cdn.wallpapersafari.com/94/57/ktl1aQ.jpg" alt="Past Event 1">
+                        </div>
+                        <div class="card-info">
+                            <h3>Past Event 1</h3>
+                            <p>Participants: 100</p>
+                            <p>Date: July 10, 2023</p>
+                            <p>Prizes: 5</p>
+                            <button onclick="navigateToEvent('past-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more past event cards here -->
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://cdn.wallpapersafari.com/94/57/ktl1aQ.jpg" alt="Past Event 1">
+                        </div>
+                        <div class="card-info">
+                            <h3>Past Event 1</h3>
+                            <p>Participants: 100</p>
+                            <p>Date: July 10, 2023</p>
+                            <p>Prizes: 5</p>
+                            <button onclick="navigateToEvent('past-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://cdn.wallpapersafari.com/94/57/ktl1aQ.jpg" alt="Past Event 1">
+                        </div>
+                        <div class="card-info">
+                            <h3>Past Event 1</h3>
+                            <p>Participants: 100</p>
+                            <p>Date: July 10, 2023</p>
+                            <p>Prizes: 5</p>
+                            <button onclick="navigateToEvent('past-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://cdn.wallpapersafari.com/94/57/ktl1aQ.jpg" alt="Past Event 1">
+                        </div>
+                        <div class="card-info">
+                            <h3>Past Event 1</h3>
+                            <p>Participants: 100</p>
+                            <p>Date: July 10, 2023</p>
+                            <p>Prizes: 5</p>
+                            <button onclick="navigateToEvent('past-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://cdn.wallpapersafari.com/94/57/ktl1aQ.jpg" alt="Past Event 1">
+                        </div>
+                        <div class="card-info">
+                            <h3>Past Event 1</h3>
+                            <p>Participants: 100</p>
+                            <p>Date: July 10, 2023</p>
+                            <p>Prizes: 5</p>
+                            <button onclick="navigateToEvent('past-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://cdn.wallpapersafari.com/94/57/ktl1aQ.jpg" alt="Past Event 1">
+                        </div>
+                        <div class="card-info">
+                            <h3>Past Event 1</h3>
+                            <p>Participants: 100</p>
+                            <p>Date: July 10, 2023</p>
+                            <p>Prizes: 5</p>
+                            <button onclick="navigateToEvent('past-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="event-card">
+                        <div class="card-image-wrapper">
+                            <img src="https://cdn.wallpapersafari.com/94/57/ktl1aQ.jpg" alt="Past Event 1">
+                        </div>
+                        <div class="card-info">
+                            <h3>Past Event 1</h3>
+                            <p>Participants: 100</p>
+                            <p>Date: July 10, 2023</p>
+                            <p>Prizes: 5</p>
+                            <button onclick="navigateToEvent('past-event1.html')">Learn More &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="carde.js"></script>
+<!--events section ends-->
+
+<!--committe section starts-->
+
+<div class="container">
+    <h2>COMMITTEES</h2>
+<div class="card-list">
+    <a href="#" class="card-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsRbRGXPV6iCFm4xyUdV-dEP_Q4hJuGx-lPA&s" alt="Card Image">
+        <span class="developer">Organizing Committee</span>
+        <h3>Our Hackathon Organizing Committee </h3>
+        <div class="arrow">
+            <i class="fas fa-arrow-right card-icon"></i>
+        </div>
+    </a>
+    <a href="#" class="card-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4buE46z6TJ5KLKsD_Z6_gcWxrpl70u4BE9Q&s" alt="Card Image">
+        <span class="designer">Executive Committee</span>
+        <h3>Our Hackathon Executive Committee</h3>
+        <div class="arrow">
+            <i class="fas fa-arrow-right card-icon"></i>
+        </div>
+    </a>
+    <a href="#" class="card-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR19oEolDez5NHtcQtxiXcEvjNQ0OJoUy3mDw&s" alt="Card Image">
+        <span class="editor">Evaluation Committee</span>
+        <h3>Our Hackathon Evaluation Committee</h3>
+        <div class="arrow">
+            <i class="fas fa-arrow-right card-icon"></i>
+        </div>
+    </a>
+</div>
+</div>
+
+<!--committe section ends-->
+
+<!--aboutus sections start-->
+
+<div class="about" id="about-us">
+    <h2>ABOUT US</h2>
+    <div class="text">
+      <h3><span>"The Hub of Hackathons".</span><br>
+        The goal of a hackathon is to create functioning software or hardware by the end of the event. Hackathons tend to have a specific focus, which can include the programming language used, the operating system, an application, an API, or the subject and the demographic group of the programmers. In other cases, there is no restriction on the type of software being created or the design of the new system.
+      </h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZdHASBiP0wT6B5kJYbA_fveSvIlxLUcBzQ&s">
+    </div>
+  </div>
+  
+    
+    
+
+<!--aboutus sections ends-->
+
+<!--footer sections starts-->
+<footer>
+<!----
+<div class="footer-wave">
+    <svg viewBox="0 0 120 28" preserveAspectRatio="none">
+        <defs>
+            <mask id="mask" x="0" y="0" width="20" height="1">
+                <rect x="0" y="0" width="20" height="1" fill="#fff"/>
+                <path d="M0 0 Q30 20, 60 0 T120 0 V28 H0 Z" fill="#000"/>
+            </mask>
+        </defs> 
+        <rect x="0" y="0" width="20" height="1" fill="#2684ff" mask="url(#mask)">
+            <animateTransform attributeName="transform" type="translate" from="0,0" to="-20,0" begin="0s" dur="15s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="0" y="0" width="20" height="1" fill="#0a74da" mask="url(#mask)">
+            <animateTransform attributeName="transform" type="translate" from="20,0" to="0,0" begin="0s" dur="15s" repeatCount="indefinite"/>
+        </rect>
+    </svg>
+</div>
+-->
+<div class="footer-container">
+    <div class="footer-left">
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter"></a>
+            <a href="mailto:someone@example.com" class="fa fa-envelope"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fa fa-linkedin"></a>
+            <a href="https://www.github.com" target="_blank" class="fa fa-github"></a>
+        </div>
+        <p>&copy; 2024 Hackathon. All Rights Reserved.</p>
+    </div>
+    <div class="footer-right" id="contact-us">
+        <h3>Contact Us</h3>
+        <form id="contact-form">
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" placeholder="Enter your message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        <p id="success-message" style="display:none;">Your message sent successfully. We will reach out to you as soon as possible.</p>
+    </div>
+</div>
+</footer>
+
+<script src="foot.js"></script>
+
+
+
+<!--footer sections ends-->
+    
+
+
+
+     
+
+     
+<!-- JavaScript -->
+    
+   
+    
+</body>
+</html>

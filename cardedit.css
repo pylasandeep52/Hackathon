@@ -1,0 +1,256 @@
+body {
+   
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    
+    margin: 0;
+    padding: 0;
+    
+    
+    /*display: flexbox;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;*/
+}
+
+.event-section {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    
+}
+
+.event-tabs {
+    margin-bottom: 20px;
+}
+
+.event-tabs button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.event-tabs button:hover {
+    background-color: #555;
+}
+
+.event-cards {
+    display: flex;
+    overflow: hidden;
+    
+    justify-content: center;
+    flex-wrap: nowrap;
+    
+    position: relative;
+}
+
+.event-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0;
+    transition: transform 0.3s;
+    width: 320px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card-info {
+    padding: 10px;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: left;
+    transition: bottom 0.5s;
+    z-index: 10;
+}
+
+.event-card:hover .card-info,
+.event-card:focus .card-info,
+.event-card.touch .card-info {
+    bottom: 0;
+}
+
+.event-card:hover img,
+.event-card:focus img,
+.event-card.touch img {
+    transform: scale(1.1);
+}
+
+.card-info h3 {
+    margin: 10px 0;
+}
+
+.participants {
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: #ffcc00;
+    color: #333;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.card-info button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-info button:hover {
+    background-color: #555;
+}
+
+.timeline {
+    font-size: 14px;
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+.swiper-container {
+    width: 100%;
+    position: relative;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 10px;
+    top: calc(50% - 12.5px);
+}
+
+.swiper-button-next {
+    right: 10px;
+    top: calc(50% - 12.5px);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .event-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        width: 100%;
+    }
+
+    .swiper-button-prev {
+        left: 5px;
+    }
+
+    .swiper-button-next {
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-tabs button {
+        padding: 8px 16px;
+        margin: 5px 5px;
+        width: 100%;
+    }
+
+    .event-tabs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 20px;
+        height: 20px;
+    }
+
+    .swiper-button-prev {
+        left: -5px;
+    }
+
+    .swiper-button-next {
+        right: -5px;
+    }
+}
+
+@media (max-width: 320px) {
+    .event-card {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .event-tabs button {
+        padding: 6px 12px;
+        margin: 2px 0;
+        width: 100%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 15px;
+        height: 15px;
+    }
+
+    .swiper-button-prev {
+        left: -3px;
+    }
+
+    .swiper-button-next {
+        right: -3px;
+    }
+}
